@@ -19,13 +19,11 @@ public class Card {
 
     private LocalDateTime dateAndTime;
 
-    @ManyToMany
-    @JoinTable(name = "card_product", joinColumns = @JoinColumn(name = "card_id"),
-            inverseJoinColumns = @JoinColumn(name = "product_id"))
-    private List<Product> products;
+    @OneToMany(mappedBy = "card")
+   private List<LineProduct> linecards;
 
     @ManyToOne
-    private User user;
+    private Client client;
 
 
 }

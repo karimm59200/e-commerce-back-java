@@ -10,9 +10,8 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-
 @Entity
-public class User {
+public class Client {
 
     @Id
     @GeneratedValue ( strategy = GenerationType.IDENTITY)
@@ -21,7 +20,9 @@ public class User {
     private String lastName;
     private String email;
 
-    @OneToMany(mappedBy = "user")
+    private String password;
+
+    @OneToMany(mappedBy = "client")
     private List<Card> cards;
 
 

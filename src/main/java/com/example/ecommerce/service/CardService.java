@@ -2,6 +2,8 @@ package com.example.ecommerce.service;
 
 import com.example.ecommerce.entity.Card;
 
+import java.util.Optional;
+
 public interface CardService {
 
         Card create(Card card);
@@ -10,7 +12,7 @@ public interface CardService {
 
         Card delete(Card card);
 
-        Card findById(Integer id);
+        Optional<Card> findById(Integer id);
 
         Card findByLastName(String lastName);
 
